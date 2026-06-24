@@ -26,18 +26,15 @@ header {
   color: white;
 }
 
-nav{
-  display: flex;
-  gap: 1.5rem;
-}
-
 nav a{
+  transition: color 2s ease;
    color: white;
   text-decoration: none;
   font-weight: 500;
+  
 }
 
-projects-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
@@ -84,4 +81,18 @@ nav a.active {
   nav.open {
     display: flex;
   }
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+.extra-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.extra-info.expanded {
+  max-height: 500px;
 }
