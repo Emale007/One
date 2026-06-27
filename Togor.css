@@ -7,8 +7,8 @@
 body {
  font-family: "Segoe ui", Arial, sans-serif;
  line-height: 1.6;
- color: #222;
- background-color: #fafafa;
+ color: black;
+ background-color: white;
 }
 
 :root{
@@ -18,7 +18,7 @@ body {
 }
 
 header {
- display: flex;
+ display:flex;
  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -26,8 +26,32 @@ header {
   color: white;
 }
 
+h1{
+  color: white;
+}
+
+body.dark-theme h1{
+  color: #0e0e0e;
+}
+
+main{
+background-image: url('img/Togor/\(Togor\)Background.jpg');
+ background-repeat: no-repeat;
+ background-size: contain;
+ background-position: center;
+ text-align: center;
+}
+
+body.dark-theme main{
+  background-image: none;
+}
+
+.right{
+text-align: right;
+}
+
 nav a{
-  transition: color 2s ease;
+  transition: color 0.5s ease;
    color: white;
   text-decoration: none;
   font-weight: 500;
@@ -87,12 +111,46 @@ nav a:hover {
   color: var(--color-accent);
 }
 
-.extra-info {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+.about {
+  max-height: 500px;
 }
 
-.extra-info.expanded {
+.about.expanded {
+max-height: 0;
+  overflow: hidden;
+}
+
+.dark {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dark.expanded {
   max-height: 500px;
+}
+
+body.dark-theme {
+  background-color: black;
+  background-image: url('img/Dark/Titan\ Eyes\ from\ DELTARUNE.jpg');
+  background-repeat: no-repeat;
+ background-position: bottom center;
+ background-size: contain;
+  color: #eaeaea;
+}
+
+body.dark-theme header {
+  background-color: #0e0e0e;
+  padding: 1rem 2rem;
+}
+
+body.dark-theme .projects-grid article {
+  background-color: #0d0d0d;
+  color: #eaeaea;
+}
+
+.error {
+  display: block;
+  color: #d33;
+  font-size: 0.85rem;
+  min-height: 1.2em;
 }
